@@ -16,7 +16,12 @@ const api = new colorpaletteAPI({
 // Example query
 var query = {
   color: "FF5733",
-  variation: "soft"
+  scheme: "triade",
+  variation: "default",
+  count: 5,
+  distance: 0.5,
+  addComplement: false,
+  webSafe: false
 };
 
 // Make the API request using callback
