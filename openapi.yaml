@@ -1,40 +1,79 @@
 openapi: 3.0.4
 info:
   title: Color Palette Generator
-  description: Color Palette is a simple tool for generating color palettes. It returns a list of colors based on a given color input.
+  description: >-
+    Color Palette is a powerful tool for generating harmonious color palettes.
+    Generate color schemes (mono, contrast, triade, tetrade, analogic) with
+    accessibility data, CSS exports, and palette images.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/colorpalette:
     get:
       summary: Generate Palette
-      description: Color Palette is a simple tool for generating color palettes. It returns a list of colors based on a given color input.
+      description: Generate a color palette from a single color
       operationId: colorpalette
       parameters:
-      - name: color
-        in: query
-        schema:
-          type: string
-        required: true
-        description: The base color to generate the palette from (e.g., FF5733)
-        example: FF5733
-      - name: variation
-        default: soft
-        in: query
-        schema:
-          type: string
-        required: false
-        description: The variation of the color palette (e.g., soft, hard, pastel, light, pale)
-        example: soft
+        - name: color
+          in: query
+          schema:
+            type: string
+          required: true
+          description: 'The base color to generate the palette from (HEX format without #)'
+          example: FF5733
+        - name: scheme
+          in: query
+          schema:
+            type: string
+          required: false
+          description: The color scheme type
+          example: triade
+        - name: variation
+          in: query
+          schema:
+            type: string
+          required: false
+          description: The color variation
+          example: soft
+        - name: count
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: Number of colors to return (1-16). Free tier limited to 5 colors
+          example: 5
+        - name: distance
+          in: query
+          schema:
+            type: number
+          required: false
+          description: >-
+            Color spacing distance (0-1). Affects triade, tetrade, and analogic
+            schemes
+          example: 0.5
+        - name: addComplement
+          in: query
+          schema:
+            type: boolean
+          required: false
+          description: Add complement color to analogic scheme
+          example: true
+        - name: webSafe
+          in: query
+          schema:
+            type: boolean
+          required: false
+          description: Return web-safe colors only
+          example: false
       responses:
         '200':
           description: Successful Response
@@ -50,59 +89,146 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   source: '#FF5733'
+                  sourceName: Outrageous Orange
                   hue: 11
+                  scheme: triade
                   variation: soft
+                  distance: 0.5
+                  colorCount: 5
                   colorPalette:
-                  - hex: '#cc988f'
-                    name: Oriental Pink
-                  - hex: '#805f59'
-                    name: Russett
-                  - hex: '#e6d2cf'
-                    name: Dust Storm
-                  - hex: '#bf6e60'
-                    name: Contessa
-                  - hex: '#a2cc8f'
-                    name: Pine Glade
-                  - hex: '#658059'
-                    name: Glade Green
-                  - hex: '#d6e6cf'
-                    name: Willow Brook
-                  - hex: '#7dbf60'
-                    name: Mantis
-                  - hex: '#607b89'
-                    name: Lynch
-                  - hex: '#597380'
-                    name: Cutty Sark
-                  - hex: '#cfdee6'
-                    name: Botticelli
-                  - hex: '#60a0bf'
-                    name: Fountain Blue
+                    - hex: '#CC988F'
+                      name: Oriental Pink
+                      rgb:
+                        r: 204
+                        g: 152
+                        b: 143
+                      hsl:
+                        h: 9
+                        s: 37
+                        l: 68
+                      luminance: 0.373
+                      isDark: true
+                      textColor: '#FFFFFF'
+                      accessibility:
+                        contrastWithWhite: 2.48
+                        contrastWithBlack: 8.46
+                        wcagAANormal: false
+                        wcagAALarge: false
+                        wcagAAA: false
+                    - hex: '#805F59'
+                      name: Russett
+                      rgb:
+                        r: 128
+                        g: 95
+                        b: 89
+                      hsl:
+                        h: 9
+                        s: 18
+                        l: 43
+                      luminance: 0.135
+                      isDark: true
+                      textColor: '#FFFFFF'
+                      accessibility:
+                        contrastWithWhite: 5.68
+                        contrastWithBlack: 3.7
+                        wcagAANormal: true
+                        wcagAALarge: true
+                        wcagAAA: false
+                    - hex: '#E6D2CF'
+                      name: Dust Storm
+                      rgb:
+                        r: 230
+                        g: 210
+                        b: 207
+                      hsl:
+                        h: 8
+                        s: 32
+                        l: 86
+                      luminance: 0.674
+                      isDark: false
+                      textColor: '#000000'
+                      accessibility:
+                        contrastWithWhite: 1.45
+                        contrastWithBlack: 14.48
+                        wcagAANormal: true
+                        wcagAALarge: true
+                        wcagAAA: true
+                    - hex: '#BF6E60'
+                      name: Contessa
+                      rgb:
+                        r: 191
+                        g: 110
+                        b: 96
+                      hsl:
+                        h: 9
+                        s: 43
+                        l: 56
+                      luminance: 0.231
+                      isDark: true
+                      textColor: '#FFFFFF'
+                      accessibility:
+                        contrastWithWhite: 3.74
+                        contrastWithBlack: 5.61
+                        wcagAANormal: false
+                        wcagAALarge: true
+                        wcagAAA: false
+                    - hex: '#A2CC8F'
+                      name: Pine Glade
+                      rgb:
+                        r: 162
+                        g: 204
+                        b: 143
+                      hsl:
+                        h: 101
+                        s: 37
+                        l: 68
+                      luminance: 0.529
+                      isDark: false
+                      textColor: '#000000'
+                      accessibility:
+                        contrastWithWhite: 1.82
+                        contrastWithBlack: 11.57
+                        wcagAANormal: true
+                        wcagAALarge: true
+                        wcagAAA: true
                   colorPaletteRaw:
-                  - cc988f
-                  - 805f59
-                  - e6d2cf
-                  - bf6e60
-                  - a2cc8f
-                  - '658059'
-                  - d6e6cf
-                  - 7dbf60
-                  - 607b89
-                  - '597380'
-                  - cfdee6
-                  - 60a0bf
+                    - cc988f
+                    - 805f59
+                    - e6d2cf
+                    - bf6e60
+                    - a2cc8f
+                  css: |-
+                    :root {
+                      --primary: #CC988F;
+                      --primary-rgb: 204, 152, 143;
+                      --secondary: #805F59;
+                      --secondary-rgb: 128, 95, 89;
+                      --tertiary: #E6D2CF;
+                      --tertiary-rgb: 230, 210, 207;
+                      --quaternary: #BF6E60;
+                      --quaternary-rgb: 191, 110, 96;
+                      --quinary: #A2CC8F;
+                      --quinary-rgb: 162, 204, 143;
+                    }
+                  image:
+                    imageName: 6ee29826-a52f-4c87-86f5-bef3b49f0dbb_palette.png
+                    format: .png
+                    downloadURL: >-
+                      https://storage.googleapis.com/apiverve/APIData/colorpalette/6ee29826-a52f-4c87-86f5-bef3b49f0dbb_palette.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1766010083&Signature=Boef5OapaNmcyp0F8bGmf%2BVfQk3zQkiWcw1THBfbsevtYGZnOuzr7xKDRlk9FYiHidSoMz6wjody2ymL7GzUoHkDvA8PEdSERhAq2z9St5yWlaX1c87KoNh%2FtCQEJqHixYk039NuYyb%2FhJu18JFY1RNrOfo8OPZEn9a3ICQdTDL0fYQEZEBxnDuc%2B7wvn4q9UFWhCJcf302HcoZoCw76AzrgVRu%2FazuahqHdVWMR1K5QTV3U51lSoqC23ERHjRZ6uZB8W0bCO65qBFrRNzWEPSVCC%2F8oafvvitZwB1YCG674q3MbtRhWXIhX2zdoPCT%2BgxL7E4fgIyXDtDLm5%2Bm%2Fsg%3D%3D
+                    expires: 1766010083748
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -110,4 +236,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
