@@ -1,9 +1,18 @@
 {
   "name": "@apiverve/colorpalette",
-  "version": "1.1.12",
-  "description": "Color Palette is a simple tool for generating color palettes. It returns a list of colors based on a given color input.",
+  "version": "1.1.13",
+  "description": "Color Palette is a powerful tool for generating harmonious color palettes. Generate color schemes (mono, contrast, triade, tetrade, analogic) with accessibility data, CSS exports, and palette images.",
   "main": "index.js",
   "types": "index.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "mocha",
     "example": "node examples/basic.js"
@@ -14,14 +23,18 @@
     "directory": "npm"
   },
   "keywords": [
-    "color palette", "color palette generator", "color palette api", "color palette tool", "color palette software"
+    ""
   ],
-  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "author": {
+    "name": "APIVerve",
+    "email": "hello@apiverve.com",
+    "url": "https://apiverve.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/apiverve/colorpalette-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/colorpalette?utm_source=npm",
+  "homepage": "https://apiverve.com/marketplace/colorpalette?utm_source=npm&utm_medium=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
