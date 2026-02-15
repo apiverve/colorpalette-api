@@ -1,6 +1,6 @@
 # Color Palette Generator Android SDK
 
-Color Palette is a simple tool for generating color palettes. It returns a list of colors based on a given color input.
+Color Palette is a powerful tool for generating harmonious color palettes. Generate color schemes (mono, contrast, triade, tetrade, analogic) with accessibility data, CSS exports, and palette images.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Platform](https://img.shields.io/badge/Platform-Android-green.svg)
@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:colorpalette-api:1.1.12'
+    implementation 'com.github.apiverve:colorpalette-api:1.1.13'
 }
 ```
 
@@ -47,7 +47,13 @@ ColorPaletteGeneratorAPIClient client = new ColorPaletteGeneratorAPIClient("YOUR
 try {
     // Prepare query parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("key", "value");
+    parameters.put("color", "FF5733");
+    parameters.put("scheme", "triade");
+    parameters.put("variation", "default");
+    parameters.put("count", 5);
+    parameters.put("distance", 0.5);
+    parameters.put("addComplement", true);
+    parameters.put("webSafe", true);
 
     // Execute the request
     APIResponse response = client.execute(parameters);
@@ -135,7 +141,7 @@ For detailed API documentation, visit: [https://docs.apiverve.com/ref/colorpalet
 
 ## Get Your API Key
 
-Get your API key from [https://apiverve.com](https://apiverve.com)
+Get your API key from [https://apiverve.com](https://apiverve.com?utm_source=android&utm_medium=readme)
 
 ---
 
@@ -162,4 +168,4 @@ This SDK is released under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## About APIVerve
 
-[APIVerve](https://apiverve.com) provides production-ready REST APIs for developers. Fast, reliable, and easy to integrate.
+[APIVerve](https://apiverve.com?utm_source=android&utm_medium=readme) provides production-ready REST APIs for developers. Fast, reliable, and easy to integrate.
