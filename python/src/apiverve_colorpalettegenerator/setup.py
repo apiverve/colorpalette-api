@@ -10,20 +10,14 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_colorpalettegenerator',
-    version='1.1.12',
+    version='1.1.13',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
-    description='Color Palette is a simple tool for generating color palettes. It returns a list of colors based on a given color input.',
+    description='Color Palette is a powerful tool for generating harmonious color palettes. Generate color schemes (mono, contrast, triade, tetrade, analogic) with accessibility data, CSS exports, and palette images.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://apiverve.com',
-    project_urls={
-        'Homepage': 'https://apiverve.com',
-        'Documentation': 'https://docs.apiverve.com/ref/colorpalette',
-        'Source': 'https://github.com/apiverve/colorpalette-api',
-        'Bug Tracker': 'https://github.com/apiverve/colorpalette-api/issues'
-    },
+    url='https://apiverve.com/marketplace/colorpalette?utm_source=pypi&utm_medium=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
