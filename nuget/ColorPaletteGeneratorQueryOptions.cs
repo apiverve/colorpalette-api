@@ -11,17 +11,45 @@ namespace APIVerve.API.ColorPaletteGenerator
     public class ColorPaletteGeneratorQueryOptions
     {
         /// <summary>
-        /// The base color to generate the palette from (e.g., FF5733)
-        /// Example: FF5733
+        /// The base color to generate the palette from (HEX format without #)
         /// </summary>
         [JsonProperty("color")]
         public string Color { get; set; }
 
         /// <summary>
-        /// The variation of the color palette (e.g., soft, hard, pastel, light, pale)
-        /// Example: soft
+        /// The color scheme type
+        /// </summary>
+        [JsonProperty("scheme")]
+        public string Scheme { get; set; }
+
+        /// <summary>
+        /// The color variation
         /// </summary>
         [JsonProperty("variation")]
         public string Variation { get; set; }
+
+        /// <summary>
+        /// Number of colors to return (1-16). Free tier limited to 5 colors
+        /// </summary>
+        [JsonProperty("count")]
+        public string Count { get; set; }
+
+        /// <summary>
+        /// Color spacing distance (0-1). Affects triade, tetrade, and analogic schemes
+        /// </summary>
+        [JsonProperty("distance")]
+        public string Distance { get; set; }
+
+        /// <summary>
+        /// Add complement color to analogic scheme
+        /// </summary>
+        [JsonProperty("addComplement")]
+        public string AddComplement { get; set; }
+
+        /// <summary>
+        /// Return web-safe colors only
+        /// </summary>
+        [JsonProperty("webSafe")]
+        public string WebSafe { get; set; }
     }
 }
