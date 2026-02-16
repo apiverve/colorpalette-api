@@ -44,7 +44,15 @@ from apiverve_colorpalettegenerator.apiClient import ColorpaletteAPIClient
 # Initialize the client with your APIVerve API key
 api = ColorpaletteAPIClient("[YOUR_API_KEY]")
 
-query = { "color": "FF5733", "scheme": "triade", "variation": "default", "count": 5, "distance": 0.5, "addComplement": true, "webSafe":  }
+query = {
+    "color": "FF5733",
+    "scheme": "triade",
+    "variation": "default",
+    "count": 5,
+    "distance": 0.5,
+    "addComplement": true,
+    "webSafe": 
+}
 
 try:
     # Make the API call
@@ -82,7 +90,15 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "color": "FF5733", "scheme": "triade", "variation": "default", "count": 5, "distance": 0.5, "addComplement": true, "webSafe":  }
+query = {
+    "color": "FF5733",
+    "scheme": "triade",
+    "variation": "default",
+    "count": 5,
+    "distance": 0.5,
+    "addComplement": true,
+    "webSafe": 
+}
 ```
 
 ###### Simple Request
@@ -186,7 +202,15 @@ from apiverve_colorpalettegenerator.apiClient import ColorpaletteAPIClient, Colo
 
 api = ColorpaletteAPIClient("[YOUR_API_KEY]")
 
-query = { "color": "FF5733", "scheme": "triade", "variation": "default", "count": 5, "distance": 0.5, "addComplement": true, "webSafe":  }
+query = {
+    "color": "FF5733",
+    "scheme": "triade",
+    "variation": "default",
+    "count": 5,
+    "distance": 0.5,
+    "addComplement": true,
+    "webSafe": 
+}
 
 try:
     result = api.execute(query)
@@ -207,7 +231,15 @@ from apiverve_colorpalettegenerator.apiClient import ColorpaletteAPIClient, Colo
 
 api = ColorpaletteAPIClient("[YOUR_API_KEY]")
 
-query = { "color": "FF5733", "scheme": "triade", "variation": "default", "count": 5, "distance": 0.5, "addComplement": true, "webSafe":  }
+query = {
+    "color": "FF5733",
+    "scheme": "triade",
+    "variation": "default",
+    "count": 5,
+    "distance": 0.5,
+    "addComplement": true,
+    "webSafe": 
+}
 
 try:
     result = api.execute(query)
@@ -241,7 +273,15 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_colorpalettegenerator.apiClient import ColorpaletteAPIClient, ColorpaletteAPIClientError
 
-query = { "color": "FF5733", "scheme": "triade", "variation": "default", "count": 5, "distance": 0.5, "addComplement": true, "webSafe":  }
+query = {
+    "color": "FF5733",
+    "scheme": "triade",
+    "variation": "default",
+    "count": 5,
+    "distance": 0.5,
+    "addComplement": true,
+    "webSafe": 
+}
 
 # Using context manager ensures proper cleanup
 with ColorpaletteAPIClient("[YOUR_API_KEY]") as api:
@@ -267,7 +307,15 @@ from apiverve_colorpalettegenerator.apiClient import ColorpaletteAPIClient
 # Enable debug mode
 api = ColorpaletteAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "color": "FF5733", "scheme": "triade", "variation": "default", "count": 5, "distance": 0.5, "addComplement": true, "webSafe":  }
+query = {
+    "color": "FF5733",
+    "scheme": "triade",
+    "variation": "default",
+    "count": 5,
+    "distance": 0.5,
+    "addComplement": true,
+    "webSafe": 
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -282,8 +330,17 @@ from apiverve_colorpalettegenerator.apiClient import ColorpaletteAPIClient
 
 api = ColorpaletteAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "color": "FF5733",
+    "scheme": "triade",
+    "variation": "default",
+    "count": 5,
+    "distance": 0.5,
+    "addComplement": true,
+    "webSafe": 
+}
+
 try:
-    query = { "color": "FF5733", "scheme": "triade", "variation": "default", "count": 5, "distance": 0.5, "addComplement": true, "webSafe":  }
     result = api.execute(query)
     print(result)
 finally:
