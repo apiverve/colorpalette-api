@@ -17,11 +17,14 @@ def call_colorpalette_api():
     Make a GET request to the Color Palette Generator API
     """
     try:
+        # Query parameters
+        params &#x3D; {&#x27;color&#x27;: &#x27;FF5733&#x27;, &#x27;scheme&#x27;: &#x27;triade&#x27;, &#x27;variation&#x27;: &#x27;soft&#x27;, &#x27;webSafe&#x27;: false}
+
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.get(API_URL, headers=headers, params=params)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
