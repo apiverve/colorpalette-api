@@ -13,7 +13,15 @@ const API_URL = 'https://api.apiverve.com/v1/colorpalette';
  */
 async function callColorPaletteGeneratorAPI() {
   try {
-    const response = await fetch(API_URL, {
+    // Query parameters
+    const params &#x3D; new URLSearchParams({
+            color: &#x27;FF5733&#x27;,
+            scheme: &#x27;triade&#x27;,
+            variation: &#x27;soft&#x27;,
+            webSafe: false
+        });
+
+    const response = await fetch(`${API_URL}?${params}`, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
