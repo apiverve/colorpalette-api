@@ -25,6 +25,9 @@ namespace APIVerve.API.ColorPaletteGenerator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -32,17 +35,35 @@ namespace APIVerve.API.ColorPaletteGenerator
         [JsonProperty("source")]
         public string Source { get; set; }
 
+        [JsonProperty("sourceName")]
+        public string SourceName { get; set; }
+
         [JsonProperty("hue")]
-        public long Hue { get; set; }
+        public long? Hue { get; set; }
+
+        [JsonProperty("scheme")]
+        public string Scheme { get; set; }
 
         [JsonProperty("variation")]
         public string Variation { get; set; }
+
+        [JsonProperty("distance")]
+        public double? Distance { get; set; }
+
+        [JsonProperty("colorCount")]
+        public long? ColorCount { get; set; }
 
         [JsonProperty("colorPalette")]
         public ColorPalette[] ColorPalette { get; set; }
 
         [JsonProperty("colorPaletteRaw")]
         public string[] ColorPaletteRaw { get; set; }
+
+        [JsonProperty("css")]
+        public string Css { get; set; }
+
+        [JsonProperty("image")]
+        public Image Image { get; set; }
     }
 
     public partial class ColorPalette
@@ -52,5 +73,92 @@ namespace APIVerve.API.ColorPaletteGenerator
 
         [JsonProperty("name")]
         public string Name { get; set; }
+
+        [JsonProperty("rgb")]
+        public Rgb Rgb { get; set; }
+
+        [JsonProperty("hsl")]
+        public Hsl Hsl { get; set; }
+
+        [JsonProperty("luminance")]
+        public double? Luminance { get; set; }
+
+        [JsonProperty("isDark")]
+        public bool? IsDark { get; set; }
+
+        [JsonProperty("textColor")]
+        public string TextColor { get; set; }
+
+        [JsonProperty("accessibility")]
+        public Accessibility Accessibility { get; set; }
+    }
+
+    public partial class Accessibility
+    {
+        [JsonProperty("contrastWithWhite")]
+        public double? ContrastWithWhite { get; set; }
+
+        [JsonProperty("contrastWithBlack")]
+        public double? ContrastWithBlack { get; set; }
+
+        [JsonProperty("wcagAANormal")]
+        public bool? WcagAaNormal { get; set; }
+
+        [JsonProperty("wcagAALarge")]
+        public bool? WcagAaLarge { get; set; }
+
+        [JsonProperty("wcagAAA")]
+        public bool? WcagAaa { get; set; }
+    }
+
+    public partial class Hsl
+    {
+        [JsonProperty("h")]
+        public long? H { get; set; }
+
+        [JsonProperty("s")]
+        public long? S { get; set; }
+
+        [JsonProperty("l")]
+        public long? L { get; set; }
+    }
+
+    public partial class Rgb
+    {
+        [JsonProperty("r")]
+        public long? R { get; set; }
+
+        [JsonProperty("g")]
+        public long? G { get; set; }
+
+        [JsonProperty("b")]
+        public long? B { get; set; }
+    }
+
+    public partial class Image
+    {
+        [JsonProperty("imageName")]
+        public string ImageName { get; set; }
+
+        [JsonProperty("format")]
+        public string Format { get; set; }
+
+        [JsonProperty("downloadURL")]
+        public Uri DownloadUrl { get; set; }
+
+        [JsonProperty("expires")]
+        public long? Expires { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
