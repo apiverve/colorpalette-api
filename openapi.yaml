@@ -2,9 +2,9 @@ openapi: 3.0.4
 info:
   title: Color Palette Generator
   description: >-
-    Color Palette is a powerful tool for generating harmonious color palettes.
-    Generate color schemes (mono, contrast, triade, tetrade, analogic) with
-    accessibility data, CSS exports, and palette images.
+    Color Palette Generator produces harmonious color schemes from any HEX base
+    color. It returns color codes in HEX and RGB formats, naming matches,
+    dark-mode flags, and recommended text colors.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/colorpalette:
     get:
-      summary: Generate Palette
+      summary: Color Palette Generator
       description: Generate a color palette from a single color
       operationId: colorpalette
       parameters:
@@ -49,7 +49,11 @@ paths:
           schema:
             type: integer
           required: false
-          description: Number of colors to return (1-16). Free tier limited to 5 colors
+          description: >-
+            Caps how many colors are returned (1-16). Each scheme has its own
+            ceiling and count cannot raise it - mono yields 4, contrast 8,
+            triade and analogic 12, tetrade 16. The colorCount field reports how
+            many were actually returned. Free tier limited to 5 colors
           example: 5
         - name: distance
           in: query
@@ -220,8 +224,7 @@ paths:
                   image:
                     imageName: 6ee29826-a52f-4c87-86f5-bef3b49f0dbb_palette.png
                     format: .png
-                    downloadURL: >-
-                      https://storage.googleapis.com/apiverve/APIData/colorpalette/6ee29826-a52f-4c87-86f5-bef3b49f0dbb_palette.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1766010083&Signature=Boef5OapaNmcyp0F8bGmf%2BVfQk3zQkiWcw1THBfbsevtYGZnOuzr7xKDRlk9FYiHidSoMz6wjody2ymL7GzUoHkDvA8PEdSERhAq2z9St5yWlaX1c87KoNh%2FtCQEJqHixYk039NuYyb%2FhJu18JFY1RNrOfo8OPZEn9a3ICQdTDL0fYQEZEBxnDuc%2B7wvn4q9UFWhCJcf302HcoZoCw76AzrgVRu%2FazuahqHdVWMR1K5QTV3U51lSoqC23ERHjRZ6uZB8W0bCO65qBFrRNzWEPSVCC%2F8oafvvitZwB1YCG674q3MbtRhWXIhX2zdoPCT%2BgxL7E4fgIyXDtDLm5%2Bm%2Fsg%3D%3D
+                    downloadURL: https://storage.googleapis.com/apiverve/APIData/colorpalette/6ee29826-a52f-4c87-86f5-bef3b49f0dbb_palette.png?GoogleAccessId=635500398038-compute%40developer.gserviceaccount.com&Expires=1766010083&Signature=Boef5OapaNmcyp0F8bGmf%2BVfQk3zQkiWcw1THBfbsevtYGZnOuzr7xKDRlk9FYiHidSoMz6wjody2ymL7GzUoHkDvA8PEdSERhAq2z9St5yWlaX1c87KoNh%2FtCQEJqHixYk039NuYyb%2FhJu18JFY1RNrOfo8OPZEn9a3ICQdTDL0fYQEZEBxnDuc%2B7wvn4q9UFWhCJcf302HcoZoCw76AzrgVRu%2FazuahqHdVWMR1K5QTV3U51lSoqC23ERHjRZ6uZB8W0bCO65qBFrRNzWEPSVCC%2F8oafvvitZwB1YCG674q3MbtRhWXIhX2zdoPCT%2BgxL7E4fgIyXDtDLm5%2Bm%2Fsg%3D%3D
                     expires: 1766010083748
         '401':
           description: Your request was not authorized, or your API Key was invalid
