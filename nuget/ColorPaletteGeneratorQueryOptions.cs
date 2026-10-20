@@ -29,7 +29,7 @@ namespace APIVerve.API.ColorPaletteGenerator
         public string Variation { get; set; }
 
         /// <summary>
-        /// Number of colors to return (1-16). Free tier limited to 5 colors
+        /// Caps how many colors are returned (1-16). Each scheme has its own ceiling and count cannot raise it - mono yields 4, contrast 8, triade and analogic 12, tetrade 16. The colorCount field reports how many were actually returned. Free tier limited to 5 colors
         /// </summary>
         [JsonProperty("count")]
         public int? Count { get; set; }
