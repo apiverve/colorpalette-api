@@ -1,7 +1,7 @@
 {
     "name": "apiverve/colorpalette",
-    "description": "Color Palette is a powerful tool for generating harmonious color palettes. Generate color schemes (mono, contrast, triade, tetrade, analogic) with accessibility data, CSS exports, and palette images.",
-    "version": "1.2.0",
+    "description": "Color Palette Generator produces harmonious color schemes from any HEX base color. It returns color codes in HEX and RGB formats, naming matches, dark-mode flags, and recommended text colors.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,13 +15,13 @@
         "api",
         "apiverve",
         "colorpalette",
-        "color palette",
-        "color palette generator",
         "color palette api",
-        "color palette tool",
-        "color scheme"
+        "color palette generator api",
+        "color api",
+        "color scheme api",
+        "color palette generator"
     ],
-    "homepage": "https://apiverve.com/marketplace/colorpalette?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/colorpalette?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/colorpalette",
