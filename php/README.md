@@ -1,6 +1,6 @@
 # Color Palette Generator API - PHP Package
 
-Color Palette is a powerful tool for generating harmonious color palettes. Generate color schemes (mono, contrast, triade, tetrade, analogic) with accessibility data, CSS exports, and palette images.
+Color Palette Generator produces harmonious color schemes from any HEX base color. It returns color codes in HEX and RGB formats, naming matches, dark-mode flags, and recommended text colors.
 
 ## Installation
 
@@ -231,11 +231,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/colorpalette?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/colorpalette?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/colorpalette?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/colorpalette?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/colorpalette?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/colorpalette?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
