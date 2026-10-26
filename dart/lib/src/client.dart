@@ -46,13 +46,13 @@ final _formatPatterns = {
 
 /// Color Palette Generator API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/colorpalette?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/colorpalette?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [color] (required) - The base color to generate the palette from (HEX format without #) [format: hexColor]
 /// * [scheme] - The color scheme type
 /// * [variation] - The color variation
-/// * [count] - Number of colors to return (1-16). Free tier limited to 5 colors [min: 1, max: 16]
+/// * [count] - Caps how many colors are returned (1-16). Each scheme has its own ceiling and count cannot raise it - mono yields 4, contrast 8, triade and analogic 12, tetrade 16. The colorCount field reports how many were actually returned. Free tier limited to 5 colors [min: 1, max: 16]
 /// * [distance] - Color spacing distance (0-1). Affects triade, tetrade, and analogic schemes [min: 0, max: 1]
 /// * [addComplement] - Add complement color to analogic scheme
 /// * [webSafe] - Return web-safe colors only
