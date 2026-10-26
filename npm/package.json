@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/colorpalette",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Color Palette Generator produces harmonious color schemes from any HEX base color. It returns color codes in HEX and RGB formats, naming matches, dark-mode flags, and recommended text colors.",
   "main": "index.js",
   "types": "index.d.ts",
