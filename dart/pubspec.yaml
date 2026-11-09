@@ -1,6 +1,6 @@
 name: apiverve_colorpalette
 description: "Color Palette Generator produces harmonious color schemes from any HEX base color. It returns color codes in HEX and RGB formats, naming matches, dark-mode flags, and recommended text colors."
-version: 1.2.4
+version: 1.2.5
 homepage: https://apiverve.com/marketplace/colorpalette?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/colorpalette-api/tree/main/dart
 
