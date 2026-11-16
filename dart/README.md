@@ -1,6 +1,6 @@
 # Color Palette Generator API - Dart/Flutter Client
 
-Color Palette Generator produces harmonious color schemes from any HEX base color. It returns color codes in HEX and RGB formats, naming matches, dark-mode flags, and recommended text colors.
+Color Palette Generator is a color palette API that builds a harmonious color scheme from one HEX base color. Every plan returns each color's HEX code, closest color name, a dark flag and a legible black or white text color; paid plans add RGB, HSL, WCAG contrast checks, CSS variables and a PNG of the palette.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_colorpalette.svg)](https://pub.dev/packages/apiverve_colorpalette)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_colorpalette: ^1.2.5
+  apiverve_colorpalette: ^1.2.6
 ```
 
 Then run:
