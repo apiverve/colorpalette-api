@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "apiverve_colorpalette"
-  spec.version       = "1.2.5"
+  spec.version       = "1.2.6"
   spec.authors       = ["APIVerve"]
   spec.email         = ["hello@apiverve.com"]
 
   spec.summary       = "Color Palette Generator API - Ruby Client"
-  spec.description   = "Color Palette Generator produces harmonious color schemes from any HEX base color. It returns color codes in HEX and RGB formats, naming matches, dark-mode flags, and recommended text colors."
+  spec.description   = "Color Palette Generator is a color palette API that builds a harmonious color scheme from one HEX base color. Every plan returns each color's HEX code, closest color name, a dark flag and a legible black or white text color; paid plans add RGB, HSL, WCAG contrast checks, CSS variables and a PNG of the palette."
   spec.homepage      = "https://apiverve.com/marketplace/colorpalette?utm_source=ruby&utm_medium=referral&utm_content=homepage"
   spec.license       = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
