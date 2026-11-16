@@ -10,11 +10,11 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_colorpalettegenerator',
-    version='1.2.5',
+    version='1.2.6',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
-    description='Color Palette Generator produces harmonious color schemes from any HEX base color. It returns color codes in HEX and RGB formats, naming matches, dark-mode flags, and recommended text colors.',
+    description='Color Palette Generator is a color palette API that builds a harmonious color scheme from one HEX base color. Every plan returns each color's HEX code, closest color name, a dark flag and a legible black or white text color; paid plans add RGB, HSL, WCAG contrast checks, CSS variables and a PNG of the palette.',
     author='APIVerve',
     author_email='hello@apiverve.com',
     url='https://apiverve.com/marketplace/colorpalette?utm_source=pypi&utm_medium=referral&utm_content=homepage',
