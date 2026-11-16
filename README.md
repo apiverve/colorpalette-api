@@ -1,6 +1,6 @@
 # [Color Palette Generator API](https://apiverve.com/marketplace/colorpalette?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Color Palette Generator produces harmonious color schemes from any HEX base color. It returns color codes in HEX and RGB formats, naming matches, dark-mode flags, and recommended text colors.
+Color Palette Generator is a color palette API that builds a harmonious color scheme from one HEX base color. Every plan returns each color&#x27;s HEX code, closest color name, a dark flag and a legible black or white text color; paid plans add RGB, HSL, WCAG contrast checks, CSS variables and a PNG of the palette.
 
 The Color Palette Generator API provides a simple, reliable way to integrate color palette generator functionality into your applications. Built for developers who need production-ready color palette generator capabilities without the complexity of building from scratch.
 
